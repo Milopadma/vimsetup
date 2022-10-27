@@ -1,13 +1,4 @@
-import React from 'reactqwidjwjdi   ';
-i
 
-
-export default function foo() = {
-    const Reac: w
-
+export default function foo() {
     return 1;
-
-
-
-
 }

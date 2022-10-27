@@ -11,6 +11,7 @@ packer.startup(function(use)
     use 'github/copilot.vim'
     use 'neovim/nvim-lspconfig'
     use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
     --    use 'prettier/vim-prettier'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -23,11 +24,15 @@ packer.startup(function(use)
     use 'hrsh7th/nvim-cmp' -- Autocompletion
     use 'neovim/nvim-lspconfig' -- LSP
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Treesitter
+    use 'jose-elias-alvarez/null-ls.nvim' -- null-ls for LSP
+    use 'MunifTanjim/prettier.nvim' -- prettier plugin
+
     use 'onsails/lspkind-nvim' -- vscode-like pictograms for neovim lsp completion items
     use {
         'folke/tokyonight.nvim',
         requires = { 'tjdevries/colorbuddy.nvim' }
     }
+    use 'lewis6991/gitsigns.nvim' -- Git signs
 end)
 
 vim.cmd [[colorscheme tokyonight]]
