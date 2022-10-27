@@ -14,9 +14,10 @@ packer.startup(function(use)
     --    use 'prettier/vim-prettier'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        requires = { { 'nvim-lua/plenary.nvim', 'BurntSushi/ripgrep' } }
     }
     use 'L3MON4D3/LuaSnip' -- Snippets
+    use 'glepnir/lspsaga.nvim' -- lsp UIs
     use 'hrsh7th/cmp-buffer' -- buffer source
     use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
     use 'hrsh7th/nvim-cmp' -- Autocompletion
