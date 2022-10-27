@@ -1,4 +1,4 @@
-local nnoremap = require("lua.keymap").nnoremap
+local nnoremap = require("keymap").nnoremap
 local builtin = require("telescope.builtin")
 
 nnoremap("<leader>ff", "<cmd>Telescope find_files<CR>")
