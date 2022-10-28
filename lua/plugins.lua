@@ -34,6 +34,8 @@ packer.startup(function(use)
     }
     use 'lewis6991/gitsigns.nvim' -- Git signs
     use "terrortylor/nvim-comment"
+    use 'JoosepAlviste/nvim-ts-context-commentstring'
+
 end)
 
 vim.cmd [[colorscheme tokyonight]]

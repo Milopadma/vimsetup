@@ -22,3 +22,11 @@ ts.setup {
         enable = true,
     },
 }
+
+
+-- for the nvim-ts-context-commentstring plugins
+require 'nvim-treesitter.configs'.setup {
+    context_commentstring = {
+        enable = true
+    }
+}
