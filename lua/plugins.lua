@@ -36,6 +36,16 @@ packer.startup(function(use)
     use "terrortylor/nvim-comment"
     use 'JoosepAlviste/nvim-ts-context-commentstring'
 
+    use({
+        "Pocco81/auto-save.nvim",
+        config = function()
+            require("auto-save").setup {
+                -- your config goes here
+                -- or just leave it empty :)
+            }
+        end,
+    })
+
 end)
 
 vim.cmd [[colorscheme tokyonight]]
