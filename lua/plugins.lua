@@ -33,6 +33,7 @@ packer.startup(function(use)
         requires = { 'tjdevries/colorbuddy.nvim' }
     }
     use 'lewis6991/gitsigns.nvim' -- Git signs
+    use "terrortylor/nvim-comment"
 end)
 
 vim.cmd [[colorscheme tokyonight]]

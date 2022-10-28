@@ -4,6 +4,7 @@ require('plugins')
 require('base')
 require('remap')
 require("mason").setup()
+require('nvim_comment').setup()
 -- require('prettier')
 -- require('null-ls')
 
