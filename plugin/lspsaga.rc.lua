@@ -20,3 +20,4 @@ vim.keymap.set('n', '<leader>to', "<cmd>Lspsaga open_floaterm<CR>", opts)
 vim.keymap.set('t', '<leader>to', "<cmd>Lspsaga close_floaterm<CR>", opts)
 -- to quickly comment out a line
 vim.keymap.set('n', '<leader>cc', "<cmd>CommentToggle<CR>", opts)
+vim.keymap.set('n', '<leader>n', "<cmd>tabnext<CR>", opts)
