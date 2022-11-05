@@ -23,7 +23,6 @@ packer.startup(function(use)
     use 'hrsh7th/cmp-buffer' -- buffer source
     use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
     use 'hrsh7th/nvim-cmp' -- Autocompletion
-    use 'neovim/nvim-lspconfig' -- LSP
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Treesitter
     use 'jose-elias-alvarez/null-ls.nvim' -- null-ls for LSP
     use 'MunifTanjim/prettier.nvim' -- prettier plugin

@@ -1,9 +1,9 @@
-local status, Neotree = pcall(require, 'Neotree')
+local status, neotree = pcall(require, 'neo-tree')
 if not status then
   return
 end
 
 -- on load, open Neotree
-require('Neotree').setup()
+require('neo-tree').setup()
 vim.cmd('autocmd VimEnter * NeoTreeFocusToggle')
 
