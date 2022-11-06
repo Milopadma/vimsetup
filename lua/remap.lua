@@ -11,6 +11,7 @@ nnoremap("<leader>fw", "<cmd>Telescope live_grep<CR>")
 
 -- For Neotree
 nnoremap("<leader>gst", "<cmd>Neotree float git_status<CR>")
+nnoremap("<leader>o", "<cmd>Neotree float toggle<CR>")
 
 -- For commenting
 nnoremap("<C-_>", "<cmd>CommentToggle<CR>")
