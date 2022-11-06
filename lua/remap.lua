@@ -16,7 +16,8 @@ nnoremap("<C-p>", "<cmd>Telescope find_files<CR>")
 nnoremap("<leader>fw", "<cmd>Telescope live_grep<CR>")
 
 -- For Neotree
-nnoremap("<leader>gst", "<cmd>Neotree float git_status<CR>")
+nnoremap("<leader>gst", "<cmd>Neotree float git_status toggle<CR>")
+
 -- leader o to open Neotree float toggle
 nnoremap("<leader>o", "<cmd>Neotree float toggle<CR>")
 
