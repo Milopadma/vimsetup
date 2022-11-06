@@ -14,7 +14,8 @@ nnoremap("<leader>gst", "<cmd>Neotree float git_status<CR>")
 nnoremap("<leader>o", "<cmd>Neotree float toggle<CR>")
 
 -- For commenting
-nnoremap("<C-_>", "<cmd>CommentToggle<CR>")
+-- when pressing option + /, it will comment out the line
+nnoremap("<M-/>", "<cmd>CommentToggle<CR>")
 
 -- For LSPsaga
 local opts = { noremap = true, silent = true }

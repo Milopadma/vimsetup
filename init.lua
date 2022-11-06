@@ -15,6 +15,7 @@ vim.opt.termguicolors = true
 -- require("bufferline").setup{}
 require('neoscroll').setup()
 
+
 -- require("nvim-tree").setup({
 --     sort_by = "case_sensitive",
 --     view = {
