@@ -12,7 +12,7 @@ require('nvim_comment').setup()
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
--- require("bufferline").setup{}
+require("bufferline").setup{}
 require('neoscroll').setup()
 
 

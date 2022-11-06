@@ -5,13 +5,20 @@ local builtin = require("telescope.builtin")
 nnoremap("<leader>w", "<cmd>w<CR>")
 nnoremap("<leader>q", "<cmd>q<CR>")
 
+-- For bufferline
+-- shift + h/l to move left/right
+nnoremap("<S-h>", "<cmd>BufferLineCyclePrev<CR>")
+nnoremap("<S-l>", "<cmd>BufferLineCycleNext<CR>")
+
 -- For telescope
 nnoremap("<C-p>", "<cmd>Telescope find_files<CR>")
 nnoremap("<leader>fw", "<cmd>Telescope live_grep<CR>")
 
 -- For Neotree
 nnoremap("<leader>gst", "<cmd>Neotree float git_status<CR>")
+-- leader o to open Neotree float toggle and expand all folders
 nnoremap("<leader>o", "<cmd>Neotree float toggle<CR>")
+
 
 -- For commenting
 -- when pressing option + /, it will comment out the line
