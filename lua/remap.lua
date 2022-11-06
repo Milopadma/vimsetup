@@ -9,16 +9,14 @@ nnoremap("<leader>q", "<cmd>q<CR>")
 nnoremap("<C-p>", "<cmd>Telescope find_files<CR>")
 nnoremap("<leader>fw", "<cmd>Telescope live_grep<CR>")
 
--- open the neotree float toggle and expand all folders
-nnoremap("<leader>ft", "<cmd>lua require('telescope').extensions.neotree.neotree({cwd = vim.fn.expand('%:p:h'), width = 0.9, height = 0.9})<CR>")
-
 -- For Neotree
 nnoremap("<leader>gst", "<cmd>Neotree float git_status<CR>")
 
 -- For commenting
-nnoremap("<C-/>", "<cmd>CommentToggle<CR>")
+nnoremap("<C-_>", "<cmd>CommentToggle<CR>")
 
 -- For LSPsaga
+local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga show_cursor_diagnostics<CR>', opts)
 vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
 vim.keymap.set('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)

@@ -4,6 +4,6 @@ if not status then
 end
 
 -- on load, open Neotree
-require('neo-tree').setup()
+-- require('neo-tree').setup()
 -- vim.cmd('autocmd VimEnter * NeoTreeFocusToggle')
 

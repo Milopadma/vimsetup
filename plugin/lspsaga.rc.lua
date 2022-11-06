@@ -8,5 +8,4 @@ saga.init_lsp_saga {
 }
 
 
-local opts = { noremap = true, silent = true }
 
