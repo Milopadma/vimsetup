@@ -322,6 +322,7 @@ use {
 }
 
     use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'kyazdani42/nvim-web-devicons'}
+    use 'karb94/neoscroll.nvim'
 
 
 end)
