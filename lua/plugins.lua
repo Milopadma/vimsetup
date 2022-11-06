@@ -57,8 +57,8 @@ packer.startup(function(use)
     -- vim.cmd [[colorscheme sonokai]]
 
     -- Color theme 5 (onedark)
-    use 'navarasu/onedark.nvim'
-    vim.cmd [[colorscheme onedark]]
+    -- use 'navarasu/onedark.nvim'
+    -- vim.cmd [[colorscheme onedark]]
 
     -- Color theme 6 (dracula)
     -- use 'dracula/vim'
@@ -68,6 +68,7 @@ packer.startup(function(use)
     -- use 'EdenEast/nightfox.nvim'
     -- vim.cmd [[colorscheme nightfox]]
 
+    -- Color theme 8 {poimandres-olivercederborg}
     -- use {
     --     'olivercederborg/poimandres.nvim',
     --     config = function()
@@ -80,6 +81,12 @@ packer.startup(function(use)
     --         }
     --     end
     -- }
+    -- vim.cmd [[colorscheme poimandres]]
+
+    -- Color theme 9 (horizon)
+    use 'Lunarvim/horizon.nvim'
+    vim.cmd [[colorscheme horizon]]
+
 
     use 'lewis6991/gitsigns.nvim' -- Git signs
 
