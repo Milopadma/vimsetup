@@ -28,11 +28,45 @@ packer.startup(function(use)
     use 'MunifTanjim/prettier.nvim' -- prettier plugin
     use 'onsails/lspkind-nvim' -- vscode-like pictograms for neovim lsp completion items
 
-    --color theme
-    use {
-        'folke/tokyonight.nvim',
-        requires = { 'tjdevries/colorbuddy.nvim' }
-    }
+    -- Color theme 1 (tokyonight-night)
+    -- use {
+    --     'folke/tokyonight.nvim',
+    --     requires = { 'tjdevries/colorbuddy.nvim' }
+    -- }
+    --
+    -- vim.cmd [[colorscheme tokyonight-night]]
+
+    -- Color theme 2 (gruvbox)
+    -- use 'morhetz/gruvbox'
+    -- vim.cmd [[colorscheme gruvbox]]
+
+    -- -- Color theme 3 (everforest-hard)
+    -- use 'sainnhe/everforest'
+    -- vim.g.everforest_background = 'soft'
+    -- vim.g.everforest_enable_italic = 1
+    -- vim.g.everforest_diagnostic_text_highlight = 1
+    -- vim.g.everforest_better_performance = 1
+    -- vim.cmd [[colorscheme everforest]]
+
+    -- Color theme 4 (sonokai)
+    -- use 'sainnhe/sonokai'
+    -- vim.g.sonokai_style = 'atlantis'
+    -- vim.g.sonokai_enable_italic = 1
+    -- vim.g.sonokai_diagnostic_text_highlight = 1
+    -- vim.g.sonokai_better_performance = 1
+    -- vim.cmd [[colorscheme sonokai]]
+
+    -- Color theme 5 (onedark)
+    use 'navarasu/onedark.nvim'
+    vim.cmd [[colorscheme onedark]]
+
+    -- Color theme 6 (dracula)
+    -- use 'dracula/vim'
+    -- vim.cmd [[colorscheme dracula]]
+
+    -- Color theme 7 (nightfox)
+    -- use 'EdenEast/nightfox.nvim'
+    -- vim.cmd [[colorscheme nightfox]]
 
     -- use {
     --     'olivercederborg/poimandres.nvim',
@@ -327,7 +361,6 @@ use {
 
 end)
 
-vim.cmd [[colorscheme tokyonight]]
 
 -- vim.cmd [[colorscheme poimandres]]
 

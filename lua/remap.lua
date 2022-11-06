@@ -9,6 +9,7 @@ nnoremap("<leader>q", "<cmd>q<CR>")
 -- shift + h/l to move left/right
 nnoremap("<S-h>", "<cmd>BufferLineCyclePrev<CR>")
 nnoremap("<S-l>", "<cmd>BufferLineCycleNext<CR>")
+nnoremap("<S-w>", "<cmd>BufferLinePickClose<CR>")
 
 -- For telescope
 nnoremap("<C-p>", "<cmd>Telescope find_files<CR>")
