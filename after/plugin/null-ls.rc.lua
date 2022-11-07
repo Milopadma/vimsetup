@@ -13,9 +13,11 @@ null_ls.setup {
         end
     end,
     sources = {
+        -- for eslint (TypeScript, JavaScript, React, Vue, etc.)
         null_ls.builtins.diagnostics.eslint_d.with({
             diagnostic_format = '[eslint] #{m}\n#{c}',
         }),
+        -- for fish
         null_ls.builtins.diagnostics.fish,
     }
 }

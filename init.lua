@@ -3,10 +3,10 @@ print("init.lua loaded")
 require('plugins')
 require('base')
 require('remap')
-require("mason").setup()
+-- require("mason").setup()
 require('nvim_comment').setup()
 -- require('prettier')
--- require('null-ls')
+require('null-ls')
 
 -- disable netrw
 vim.g.loaded_netrw = 1

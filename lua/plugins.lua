@@ -18,11 +18,11 @@ packer.startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim', 'BurntSushi/ripgrep' } }
     } -- file finder
     use 'ggandor/lightspeed.nvim' -- fast cursor movement
-    use 'L3MON4D3/LuaSnip' -- Snippets
+    -- use 'L3MON4D3/LuaSnip' -- Snippets
     use 'glepnir/lspsaga.nvim' -- lsp UIs
-    use 'hrsh7th/cmp-buffer' -- buffer source
-    use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-    use 'hrsh7th/nvim-cmp' -- Autocompletion
+    -- use 'hrsh7th/cmp-buffer' -- buffer source
+    -- use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+    -- use 'hrsh7th/nvim-cmp' -- Autocompletion
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Treesitter
     use 'jose-elias-alvarez/null-ls.nvim' -- null-ls for LSP
     use 'MunifTanjim/prettier.nvim' -- prettier plugin
@@ -89,8 +89,11 @@ packer.startup(function(use)
 
 
     use 'lewis6991/gitsigns.nvim' -- Git signs
+    -- For commenting toggles
     use "terrortylor/nvim-comment"
     use 'JoosepAlviste/nvim-ts-context-commentstring'
+
+    -- For auto saving
     use({
         "Pocco81/auto-save.nvim",
         config = function()
@@ -111,9 +114,16 @@ packer.startup(function(use)
 
     -- Autoclose bracket pairs
     use {
-	"windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
+    	"windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
     }
+
+    -- Bufferline tabs
+    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'kyazdani42/nvim-web-devicons'}
+
+    -- Smooth scrolling
+    use 'karb94/neoscroll.nvim'
+
 
     use {
     "nvim-neo-tree/neo-tree.nvim",
@@ -364,9 +374,6 @@ packer.startup(function(use)
       vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
     end
 }
-
-    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'kyazdani42/nvim-web-devicons'}
-    use 'karb94/neoscroll.nvim'
 
 
 end)
