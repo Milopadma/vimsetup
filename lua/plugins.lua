@@ -89,11 +89,8 @@ packer.startup(function(use)
 
 
     use 'lewis6991/gitsigns.nvim' -- Git signs
-
     use "terrortylor/nvim-comment"
-
     use 'JoosepAlviste/nvim-ts-context-commentstring'
-
     use({
         "Pocco81/auto-save.nvim",
         config = function()
@@ -112,8 +109,14 @@ packer.startup(function(use)
     --     tag = 'nightly' -- optional, updated every week. (see issue #1193)
     -- }
 
-use {
-  "nvim-neo-tree/neo-tree.nvim",
+    -- Autoclose bracket pairs
+    use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+    }
+
+    use {
+    "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
     requires = { 
       "nvim-lua/plenary.nvim",
