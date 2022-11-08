@@ -37,3 +37,6 @@ vim.keymap.set('n', '<leader>ca', "<cmd>Lspsaga code_action<CR>", opts)
 vim.keymap.set('n', '<leader>tf', "<cmd>Lspsaga open_floaterm<CR>", opts)
 vim.keymap.set('t', '<leader>tf', "<cmd>Lspsaga close_floaterm<CR>", opts)
 -- vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+
+-- For opening a floating terminal and running the code 
+vim.keymap.set('n', '<leader>tr', "<cmd>RunFile float toggle<CR>", opts)

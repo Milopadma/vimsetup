@@ -27,6 +27,7 @@ packer.startup(function(use)
     use 'jose-elias-alvarez/null-ls.nvim' -- null-ls for LSP
     use 'MunifTanjim/prettier.nvim' -- prettier plugin
     use 'onsails/lspkind-nvim' -- vscode-like pictograms for neovim lsp completion items
+    use { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim' } -- code runner
 
     -- Color theme 1 (tokyonight-night)
     -- use {
@@ -128,7 +129,7 @@ packer.startup(function(use)
     use {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
-    requires = { 
+    requires = {
       "nvim-lua/plenary.nvim",
       "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
@@ -239,7 +240,7 @@ packer.startup(function(use)
         },
         window = {
           position = "left",
-          width = 40,
+          width = 20,
           mapping_options = {
             noremap = true,
             nowait = true,

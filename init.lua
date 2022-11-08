@@ -13,8 +13,35 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 require("bufferline").setup{}
-require('neoscroll').setup()
+require('neoscroll').setup(
+    -- set the scroll animation speed
+    {
+        easing_function = "quadratic",
+        highlight = "Search",
+        cursor_scrolls_alone = true,
+    }
+)
 
+-- for the code runner 
+require('code_runner').setup({
+  -- put here the commands by filetype
+  filetype = {
+		java = "cd $dir && javac $fileName && java $fileNameWithoutExt",
+		python = "python3 -u",
+		typescript = "deno run",
+		rust = "cd $dir && cargo r $fileName && $dir/$fileNameWithoutExt"
+	},
+    float = {
+      border = "single",
+      winblend = 0,
+      width = 0.6,
+      height = 0.8,
+      highlight = "NormalFloat",
+      title = "Code Runner",
+    },
+
+}
+)
 
 -- require("nvim-tree").setup({
 --     sort_by = "case_sensitive",
