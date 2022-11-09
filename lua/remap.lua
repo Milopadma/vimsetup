@@ -38,3 +38,11 @@ vim.keymap.set('t', '<leader>tf', "<cmd>Lspsaga close_floaterm<CR>", opts)
 
 -- For opening a floating terminal and running the code 
 vim.keymap.set('n', '<leader>tr', "<cmd>RunFile float toggle<CR>", opts)
+
+-- for harpoon
+vim.keymap.set('n', '<leader>h', "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
+vim.keymap.set('n', '<leader>a', "<cmd>lua require('harpoon.mark').add_file()<CR>", opts)
+vim.keymap.set('n', '<leader>1', "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", opts)
+vim.keymap.set('n', '<leader>2', "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", opts)
+vim.keymap.set('n', '<leader>3', "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", opts)
+vim.keymap.set('n', '<leader>4', "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", opts)

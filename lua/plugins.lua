@@ -30,7 +30,7 @@ packer.startup(function(use)
 	use("onsails/lspkind-nvim") -- vscode-like pictograms for neovim lsp completion items
 	use({ "CRAG666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
 
-	-- Lua
+	-- which key plugin
 	use({
 		"folke/which-key.nvim",
 		config = function()
@@ -38,6 +38,27 @@ packer.startup(function(use)
             })
 		end,
 	})
+
+    -- harpoon
+    use({
+        "ThePrimeagen/harpoon",
+        config = function()
+            require("harpoon").setup({
+                global_settings = {
+                    save_on_toggle = false,
+                    save_on_change = true,
+                },
+                projects = {
+                    ["/home/username/Projects"] = {
+                        term = {},
+                        files = {},
+                        git = {},
+                    },
+                },
+            })
+        end,
+    })
+
 	-- Color theme 1 (tokyonight-night)
 	-- use {
 	--     'folke/tokyonight.nvim',
