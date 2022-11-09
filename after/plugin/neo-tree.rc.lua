@@ -3,7 +3,8 @@ if not status then
   return
 end
 
--- neotree.setup(
---     -- always enable file preview
--- )
+-- open neo-tree toggle when vim start
+vim.cmd('autocmd VimEnter * Neotree float toggle')
 
+-- close neo-tree when entering a file
+vim.cmd('autocmd BufEnter * if (winnr("$") == 1 && exists("b:neotree")) | q | endif')
