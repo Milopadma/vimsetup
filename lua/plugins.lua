@@ -18,8 +18,7 @@ packer.startup(function(use)
 		tag = "0.1.0",
 		requires = { { "nvim-lua/plenary.nvim", "BurntSushi/ripgrep" } },
 	}) -- file finder
-	use("ggandor/lightspeed.nvim",{
-    }) -- fast cursor movement
+	use("ggandor/lightspeed.nvim", {}) -- fast cursor movement
 	-- use 'l3mon4d3/luasnip' -- snippets
 	use("glepnir/lspsaga.nvim") -- lsp uis
 	-- use 'hrsh7th/cmp-buffer' -- buffer source
@@ -32,36 +31,69 @@ packer.startup(function(use)
 	use({ "crag666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
 
 	-- which key plugin
+	-- Lua
 	use({
 		"folke/which-key.nvim",
 		config = function()
 			require("which-key").setup({
-                -- change timeout
-                timeout = 100,
-
-	            })
+                triggers = {"<leader>"},
+                triggers_blacklist = {
+                    i = { "j", "k" },
+                    v = { "j", "k" },
+                    n = { "j", "k", "!" },
+                },
+			})
 		end,
 	})
 
-    -- harpoon
-    use({
-        "theprimeagen/harpoon",
-        config = function()
-            require("harpoon").setup({
-                global_settings = {
-                    save_on_toggle = false,
-                    save_on_change = true,
-                },
-                projects = {
-                    ["/home/username/projects"] = {
-                        term = {},
-                        files = {},
-                        git = {},
-                    },
-                },
-            })
-        end,
-    })
+	-- tab out plugin
+	use({
+		"abecodes/tabout.nvim",
+		config = function()
+			require("tabout").setup({
+				tabkey = "<Tab>", -- key to trigger tabout, set to an empty string to disable
+				backwards_tabkey = "<S-Tab>", -- key to trigger backwards tabout, set to an empty string to disable
+				act_as_tab = true, -- shift content if tab out is not possible
+				act_as_shift_tab = false, -- reverse shift content if tab out is not possible (if your keyboard/terminal supports <S-Tab>)
+				default_tab = "<C-t>", -- shift default action (only at the beginning of a line, otherwise <TAB> is used)
+				default_shift_tab = "<C-d>", -- reverse shift default action,
+				enable_backwards = true, -- well ...
+				completion = true, -- if the tabkey is used in a completion pum
+				tabouts = {
+					{ open = "'", close = "'" },
+					{ open = '"', close = '"' },
+					{ open = "`", close = "`" },
+					{ open = "(", close = ")" },
+					{ open = "[", close = "]" },
+					{ open = "{", close = "}" },
+				},
+				ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
+				exclude = {}, -- tabout will ignore these filetypes
+			})
+		end,
+		wants = { "nvim-treesitter" }, -- or require if not used so far
+		after = { "nvim-cmp" }, -- if a completion plugin is using tabs load it before
+	})
+
+	-- harpoon
+	use({
+		"theprimeagen/harpoon",
+		config = function()
+			require("harpoon").setup({
+				global_settings = {
+					save_on_toggle = false,
+					save_on_change = true,
+				},
+				projects = {
+					["/home/username/projects"] = {
+						term = {},
+						files = {},
+						git = {},
+					},
+				},
+			})
+		end,
+	})
 
 	-- color theme 1 (tokyonight-night)
 	-- use {
@@ -152,7 +184,7 @@ packer.startup(function(use)
 	-- smooth scrolling
 	use("karb94/neoscroll.nvim")
 
-    -- for nvim-neo-tree
+	-- for nvim-neo-tree
 	use({
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v2.x",
@@ -387,7 +419,7 @@ packer.startup(function(use)
 							["gc"] = "git_commit",
 							["gp"] = "git_push",
 							["gg"] = "git_commit_and_push",
-	                        ["<Esc>"] = "close_window",
+							["<Esc>"] = "close_window",
 						},
 					},
 				},

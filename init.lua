@@ -45,6 +45,9 @@ require('code_runner').setup({
 -- remove any trailing whitespace
 vim.cmd("autocmd BufWritePre * %s/\\s\\+$//e")
 
+-- for which-key timeoutlen
+vim.g.timeoutlen = 1
+
 local has = function(x)
     return vim.fn.has(x) == 1
 end
