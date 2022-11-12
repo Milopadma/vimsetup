@@ -387,7 +387,7 @@ packer.startup(function(use)
 							["gc"] = "git_commit",
 							["gp"] = "git_push",
 							["gg"] = "git_commit_and_push",
-	                            ["<esc>"] = "close_window",
+	                        ["<Esc>"] = "close_window",
 						},
 					},
 				},
