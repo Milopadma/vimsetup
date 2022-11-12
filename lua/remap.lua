@@ -37,7 +37,7 @@ vim.keymap.set('t', '<leader>tf', "<cmd>Lspsaga close_floaterm<CR>", opts)
 vim.keymap.set('t', '<Esc>', "<cmd>Lspsaga close_floaterm<CR>", opts)
 -- vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 
--- For opening a floating terminal and running the code 
+-- For opening a floating terminal and running the code
 vim.keymap.set('n', '<leader>tr', "<cmd>RunFile float toggle<CR>", opts)
 
 -- for harpoon
@@ -49,5 +49,4 @@ vim.keymap.set('n', '#', "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", opts)
 vim.keymap.set('n', '$', "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", opts)
 
 -- for lightspeed
--- for <Plug>Lightspeed_omni_s
 vim.keymap.set('n', 's', "<Plug>Lightspeed_omni_s", {})

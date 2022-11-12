@@ -21,7 +21,7 @@ require('neoscroll').setup(
     }
 )
 
--- for the code runner 
+-- for the code runner
 require('code_runner').setup({
   -- put here the commands by filetype
   filetype = {
@@ -41,6 +41,9 @@ require('code_runner').setup({
 
 }
 )
+
+-- remove any trailing whitespace
+vim.cmd("autocmd BufWritePre * %s/\\s\\+$//e")
 
 local has = function(x)
     return vim.fn.has(x) == 1

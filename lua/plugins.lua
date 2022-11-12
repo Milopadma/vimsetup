@@ -36,7 +36,10 @@ packer.startup(function(use)
 		"folke/which-key.nvim",
 		config = function()
 			require("which-key").setup({
-            })
+                -- change timeout
+                timeout = 100,
+
+	            })
 		end,
 	})
 
@@ -170,7 +173,6 @@ packer.startup(function(use)
 							bo = {
 								-- if the file type is one of following, the window will be ignored
 								filetype = { "neo-tree", "neo-tree-popup", "notify" },
-	
 								-- if the buffer type is one of following, the window will be ignored
 								buftype = { "terminal", "quickfix" },
 							},
@@ -183,7 +185,6 @@ packer.startup(function(use)
 		config = function()
 			-- unless you are still migrating, remove the deprecated commands from v1.x
 			vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
-	
 			-- if you want icons for diagnostic errors, you'll need to define them somewhere:
 			vim.fn.sign_define("diagnosticsignerror", { text = " ", texthl = "diagnosticsignerror" })
 			vim.fn.sign_define("diagnosticsignwarn", { text = " ", texthl = "diagnosticsignwarn" })
@@ -191,7 +192,6 @@ packer.startup(function(use)
 			vim.fn.sign_define("diagnosticsignhint", { text = "", texthl = "diagnosticsignhint" })
 			-- note: this is changed from v1.x, which used the old style of highlight groups
 			-- in the form "lspdiagnosticssignwarning"
-	
 			require("neo-tree").setup({
 				close_if_last_window = true, -- close neo-tree if it is the last window left in the tab
 				popup_border_style = "rounded",
@@ -394,7 +394,6 @@ packer.startup(function(use)
 				-- to close the tree when you open a file
 				vim.cmd("autocmd filetype nvimtree setlocal nobuflisted"),
 			})
-	
 			-- vim.cmd([[nnoremap \ :neotree reveal<cr>]])
 		end,
 	})
