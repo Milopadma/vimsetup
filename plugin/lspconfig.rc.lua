@@ -68,62 +68,62 @@ nvim_lsp.jdtls.setup({
 	on_attach = on_attach,
 	cmd = { "jdtls" },
 	filetypes = { "java" },
-	root_dir = nvim_lsp.util.root_pattern(
-		".git",
-		"pom.xml",
-		"build.gradle",
-		"settings.gradle",
-		"gradle.properties",
-		".project"
-	),
+	-- root_dir = nvim_lsp.util.root_pattern(
+	-- 	".git",
+	-- 	"pom.xml",
+	-- 	"build.gradle",
+	-- 	"settings.gradle",
+	-- 	"gradle.properties",
+	-- 	".project"
+	-- ),
 	init_options = {
 		bundles = {
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.core.resources_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.core.expressions_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.core.runtime_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.core.filesystem_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.text_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.osgi_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.jdt.core_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.jdt.ui_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.jdt.ls.core_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.jdt.ls.debug_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.jdt.ls.tests_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.core_*.jar"),
-			vim.fn.glob(
-				"/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.logback.appender_*.jar"
-			),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.jdt_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.maven.runtime_*.jar"),
-			vim.fn.glob(
-				"/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.maven.runtime.slf4j.simple_*.jar"
-			),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.workspace.cli_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.wtp_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.wtp.jaxrs_*.jar"),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.wtp.jsf_*.jar"),
-			vim.fn.glob(
-				"/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.wtp.mavenarchiver_*.jar"
-			),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.wtp.overlay_*.jar"),
-			vim.fn.glob(
-				"/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.wtp.runtimes.tomcat_*.jar"
-			),
-			vim.fn.glob(
-				"/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.wtp.runtimes.wildfly_*.jar"
-			),
-			vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.wtp.war_*.jar"),
-			vim.fn.glob(
-				"/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.wst.common.componentcore_*.jar"
-			),
-			vim.fn.glob(
-				"/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.wst.common.project.facet.core_*.jar"
-			),
-	        vim.fn.glob(
-				"/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.wst.common.project.facet.ui_*.jar"
-			),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.core.resources_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.core.expressions_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.core.runtime_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.core.filesystem_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.text_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.osgi_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.jdt.core_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.jdt.ui_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.jdt.ls.core_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.jdt.ls.debug_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.jdt.ls.tests_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.core_*.jar"),
+			-- vim.fn.glob(
+			-- 	"/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.logback.appender_*.jar"
+			-- ),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.jdt_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.maven.runtime_*.jar"),
+			-- vim.fn.glob(
+			-- 	"/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.maven.runtime.slf4j.simple_*.jar"
+			-- ),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.workspace.cli_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.wtp_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.wtp.jaxrs_*.jar"),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.wtp.jsf_*.jar"),
+			-- vim.fn.glob(
+			-- 	"/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.wtp.mavenarchiver_*.jar"
+			-- ),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.wtp.overlay_*.jar"),
+			-- vim.fn.glob(
+			-- 	"/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.wtp.runtimes.tomcat_*.jar"
+			-- ),
+			-- vim.fn.glob(
+			-- 	"/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.wtp.runtimes.wildfly_*.jar"
+			-- ),
+			-- vim.fn.glob("/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.m2e.wtp.war_*.jar"),
+			-- vim.fn.glob(
+			-- 	"/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.wst.common.componentcore_*.jar"
+			-- ),
+			-- vim.fn.glob(
+			-- 	"/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.wst.common.project.facet.core_*.jar"
+			-- ),
+			-- 	        vim.fn.glob(
+			-- 	"/home/username/.config/nvim/lsp/eclipse.jdt.ls/plugins/org.eclipse.wst.common.project.facet.ui_*.jar"
+			-- ),
 		},
 	},
 })
