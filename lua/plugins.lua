@@ -26,7 +26,14 @@ packer.startup(function(use)
 	-- use 'hrsh7th/nvim-cmp' -- autocompletion
 	use({ "nvim-treesitter/nvim-treesitter", run = ":tsupdate" }) -- treesitter
 	use("jose-elias-alvarez/null-ls.nvim") -- null-ls for lsp
-	use("muniftanjim/prettier.nvim") -- prettier plugin
+	-- use("muniftanjim/prettier.nvim") -- prettier plugin
+	use("lukas-reineke/lsp-format.nvim") -- for formatting lsp
+	local on_attach = function(client)
+		require("lsp-format").on_attach(client)
+
+		-- ... custom code ...
+	end
+	require("lspconfig").gopls.setup({ on_attach = on_attach })
 	use("onsails/lspkind-nvim") -- vscode-like pictograms for neovim lsp completion items
 	use({ "crag666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
 
@@ -34,45 +41,13 @@ packer.startup(function(use)
 	-- Lua
 	use({
 		"folke/which-key.nvim",
-		config = function()
-			require("which-key").setup({
-                triggers = {"<leader>"},
-                triggers_blacklist = {
-                    i = { "j", "k" },
-                    v = { "j", "k" },
-                    n = { "j", "k", "!" },
-                },
-			})
-		end,
 	})
 
 	-- tab out plugin
 	use({
 		"abecodes/tabout.nvim",
-		config = function()
-			require("tabout").setup({
-				tabkey = "<Tab>", -- key to trigger tabout, set to an empty string to disable
-				backwards_tabkey = "<S-Tab>", -- key to trigger backwards tabout, set to an empty string to disable
-				act_as_tab = true, -- shift content if tab out is not possible
-				act_as_shift_tab = false, -- reverse shift content if tab out is not possible (if your keyboard/terminal supports <S-Tab>)
-				default_tab = "<C-t>", -- shift default action (only at the beginning of a line, otherwise <TAB> is used)
-				default_shift_tab = "<C-d>", -- reverse shift default action,
-				enable_backwards = true, -- well ...
-				completion = true, -- if the tabkey is used in a completion pum
-				tabouts = {
-					{ open = "'", close = "'" },
-					{ open = '"', close = '"' },
-					{ open = "`", close = "`" },
-					{ open = "(", close = ")" },
-					{ open = "[", close = "]" },
-					{ open = "{", close = "}" },
-				},
-				ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
-				exclude = {}, -- tabout will ignore these filetypes
-			})
-		end,
 		wants = { "nvim-treesitter" }, -- or require if not used so far
-		after = { "nvim-cmp" }, -- if a completion plugin is using tabs load it before
+		after = { "nvim-cmp, copilot" }, -- if a completion plugin is using tabs load it before
 	})
 
 	-- harpoon
@@ -164,8 +139,7 @@ packer.startup(function(use)
 		"pocco81/auto-save.nvim",
 		config = function()
 			require("auto-save").setup({
-				-- your config goes here
-				-- or just leave it empty :)
+				--
 			})
 		end,
 	})
