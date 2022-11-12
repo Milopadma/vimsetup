@@ -18,7 +18,8 @@ packer.startup(function(use)
 		tag = "0.1.0",
 		requires = { { "nvim-lua/plenary.nvim", "BurntSushi/ripgrep" } },
 	}) -- file finder
-	use("ggandor/lightspeed.nvim") -- fast cursor movement
+	use("ggandor/lightspeed.nvim",{
+    }) -- fast cursor movement
 	-- use 'l3mon4d3/luasnip' -- snippets
 	use("glepnir/lspsaga.nvim") -- lsp uis
 	-- use 'hrsh7th/cmp-buffer' -- buffer source

@@ -47,3 +47,7 @@ vim.keymap.set('n', '!', "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", opts)
 vim.keymap.set('n', '@', "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", opts)
 vim.keymap.set('n', '#', "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", opts)
 vim.keymap.set('n', '$', "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", opts)
+
+-- for lightspeed
+-- for <Plug>Lightspeed_omni_s
+vim.keymap.set('n', 's', "<Plug>Lightspeed_omni_s", {})
