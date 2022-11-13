@@ -46,9 +46,7 @@ packer.startup(function(use)
 	-- tab out plugin
 	use({
 		"abecodes/tabout.nvim",
-		wants = { "nvim-treesitter" }, -- or require if not used so far
-		after = { "nvim-cmp, copilot" }, -- if a completion plugin is using tabs load it before
-	})
+		})
 
 	-- harpoon
 	use({

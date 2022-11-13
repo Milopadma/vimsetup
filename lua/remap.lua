@@ -1,7 +1,7 @@
 local nnoremap = require("keymap").nnoremap
 
 -- For normal nav
-nnoremap("<leader>w", "<cmd>w | Prettier<CR>")
+nnoremap("<leader>w", "<cmd>w<CR>")
 nnoremap("<leader>q", "<cmd>q<CR>")
 
 -- For bufferline
