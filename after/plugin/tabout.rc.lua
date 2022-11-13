@@ -4,8 +4,8 @@ if not status then
 end
 
 tabout.setup {
-  tabkey = '<Tab>',
-  backwards_tabkey = '<S-Tab>',
+  tabkey = '<S-Tab>',
+  backwards_tabkey = '<C-Tab>',
   act_as_tab = true,
   act_as_shift_tab = true,
   enable_backwards = true,
