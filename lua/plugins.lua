@@ -28,13 +28,6 @@ packer.startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim") -- null-ls for lsp
 	-- use("muniftanjim/prettier.nvim") -- prettier plugin
 	use("lukas-reineke/lsp-format.nvim") -- for formatting lsp
-	local on_attach = function(client)
-		require("lsp-format").on_attach(client)
-		-- ... custom code ...
-	end
-	require("lspconfig").gopls.setup({ on_attach = on_attach })
-    require("lspconfig").stylua.setup({ on_attach = on_attach })
-
 	use("onsails/lspkind-nvim") -- vscode-like pictograms for neovim lsp completion items
 	use({ "crag666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
 
@@ -47,9 +40,9 @@ packer.startup(function(use)
 	-- tab out plugin
 	use({
 		"abecodes/tabout.nvim",
-        	wants = {'nvim-treesitter'}, -- or require if not used so far
-	        after = {'nvim-cmp', 'copilot'}  -- if a completion plugin is using tabs load it before
-		})
+		wants = { "nvim-treesitter" }, -- or require if not used so far
+		after = { "nvim-cmp", "copilot" }, -- if a completion plugin is using tabs load it before
+	})
 
 	-- harpoon
 	use({
