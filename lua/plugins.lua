@@ -34,6 +34,7 @@ packer.startup(function(use)
 		-- ... custom code ...
 	end
 	require("lspconfig").gopls.setup({ on_attach = on_attach })
+
 	use("onsails/lspkind-nvim") -- vscode-like pictograms for neovim lsp completion items
 	use({ "crag666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
 
@@ -46,6 +47,8 @@ packer.startup(function(use)
 	-- tab out plugin
 	use({
 		"abecodes/tabout.nvim",
+        	wants = {'nvim-treesitter'}, -- or require if not used so far
+	        after = {'nvim-cmp', 'copilot'}  -- if a completion plugin is using tabs load it before
 		})
 
 	-- harpoon
